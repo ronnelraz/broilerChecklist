@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/btn_primary"
+    app:strokeWidth="1dp"
+    app:cardElevation="5dp"
+    android:id="@+id/card"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:backgroundTint="#ffff">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="10dp">
+
+       <TextView
+           android:layout_alignParentStart="true"
+           android:layout_alignParentTop="true"
+           android:gravity="center|start"
+           android:drawablePadding="5dp"
+           android:drawableStart="@drawable/icons8_document"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:text="Document No : "
+           android:textStyle="bold"
+           android:fontFamily="sans-serif-black"
+           android:id="@+id/document_no"/>
+
+       <TextView
+           android:layout_below="@+id/document_no"
+           android:layout_alignParentStart="true"
+           android:gravity="center|start"
+           android:drawablePadding="5dp"
+           android:drawableStart="@drawable/calendar"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:text="Audit Date : "
+           android:textStyle="bold"
+           android:fontFamily="sans-serif-black"
+           android:id="@+id/audit_date"/>
+
+       <TextView
+           android:layout_alignParentStart="true"
+           android:layout_below="@+id/audit_date"
+           android:textStyle="bold"
+           android:fontFamily="sans-serif-black"
+           android:gravity="center|start"
+           android:drawablePadding="8dp"
+           android:drawableStart="@drawable/icons8_farm_edit"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Farm Name : "
+           android:id="@+id/farm_name"/>
+
+
+       <TextView
+           android:layout_marginTop="5dp"
+           android:layout_alignParentStart="true"
+           android:layout_below="@+id/farm_name"
+           android:textStyle="bold"
+           android:fontFamily="sans-serif-black"
+           android:gravity="center|start"
+           android:drawablePadding="5dp"
+           android:drawableStart="@drawable/icons8_approved"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Approve By : "
+           android:id="@+id/approveby"/>
+
+       <TextView
+           android:layout_marginTop="5dp"
+           android:layout_alignParentStart="true"
+           android:layout_below="@+id/approveby"
+           android:textStyle="bold"
+           android:fontFamily="sans-serif-black"
+           android:gravity="center|start"
+           android:drawablePadding="8dp"
+           android:drawableStart="@drawable/icons8_sand_watch"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Status : "
+           android:id="@+id/status"/>
+
+
+       <ImageView
+           android:visibility="gone"
+           android:id="@+id/checked"
+           android:layout_marginEnd="10dp"
+           android:layout_centerInParent="true"
+           android:layout_alignParentEnd="true"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:src="@drawable/check"/>
+
+
+
+
+
+
+   </RelativeLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/icons8_more_than"
+        android:layout_width="15dp"
+        android:layout_height="15dp"/>
+    <!-- First column -->
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/reason_name"
+        android:textColor="@color/black"
+        android:fontFamily="@font/baloo_bhaina_2_semibold"
+        android:gravity="start|center"
+        android:paddingLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:hint="Broiler Reject" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="match_parent"/>
+
+
+    <!-- Third column -->
+    <EditText
+        android:id="@+id/reason_birds"
+        android:inputType="number"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:background="@drawable/box"
+        android:backgroundTint="#DAE5EA"
+        android:textColor="@color/black"
+        android:fontFamily="@font/baloo_bhai"
+        android:gravity="center|end"
+        android:paddingEnd="10dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textCursorDrawable="@color/black"
+        android:hint="0" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

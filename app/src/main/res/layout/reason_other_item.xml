@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+
+        android:id="@+id/checkbox"
+        android:buttonTint="@color/btn_danger"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <!-- First column -->
+    <TextView
+        android:id="@+id/reason_name"
+        android:textColor="@color/black"
+        android:fontFamily="@font/baloo_bhaina_2_semibold"
+        android:gravity="start|center"
+        android:paddingLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="match_parent"/>
+
+
+    <!-- Third column -->
+    <com.google.android.material.button.MaterialButton
+        android:enabled="false"
+        android:id="@+id/addmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add more"
+        android:textSize="10sp"
+        android:backgroundTint="#FFFFFF"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/btn_success"
+        android:textColor="@color/black"
+        app:cornerRadius="20dp"/>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

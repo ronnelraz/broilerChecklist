@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/btn_secondary"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/icon_login"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/icon_large" />
+
+    <TextView
+        android:id="@+id/title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon_login"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/baloo_bhaina_2_bold"
+        android:gravity="center"
+        android:text="Broiler Checklist"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+
+
+    <LinearLayout
+        android:paddingBottom="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_below="@+id/title_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/black"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:expandedHintEnabled="true"
+            android:id="@+id/lusername"
+            android:hint="Username"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+
+            android:elevation="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/username"
+                android:background="@drawable/box"
+                android:drawableTint="@color/btn_success"
+                android:backgroundTint="#E7ECE7"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/baloo_bhai_2_medium"
+                tools:text="@tools:sample/full_names"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:elevation="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/black"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:expandedHintEnabled="true"
+            android:id="@+id/lpassword"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:hint="Password"
+            app:passwordToggleTint="@color/btn_success"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/password"
+                android:background="@drawable/box"
+                android:drawableTint="@color/btn_success"
+                android:backgroundTint="#E7ECE7"
+                android:fontFamily="@font/baloo_bhai_2_medium"
+                android:drawablePadding="10dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                tools:text="@tools:sample/full_names"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/keeplogin"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep me login"
+            android:fontFamily="@font/baloo_bhai_2_medium"
+            style="@style/CheckBoxStyle"
+            android:buttonTint="@color/btn_success"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="login"
+            android:layout_marginBottom="10dp"
+            app:elevation="5dp"
+            app:cornerRadius="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Login"
+            android:backgroundTint="@color/btn_success"
+            android:textSize="13sp"
+            app:iconSize="20dp"
+            app:icon="@drawable/sign_in_alt"
+            app:iconGravity="textStart"
+            app:rippleColor="#3CFFFFFF"
+            />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

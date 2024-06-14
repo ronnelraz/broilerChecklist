@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Farm_menu">
+
+    <include android:id="@+id/appbar" layout="@layout/appbar"/>
+    <include layout="@layout/body_img"/>
+
+    <EditText
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+        android:singleLine="true"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/icons8_search"
+        android:textColor="@color/black"
+        android:textColorHint="@color/disabled"
+        android:hint="Search Farm Code | Farm Name"
+        android:background="@drawable/box"
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/appbar"
+        android:elevation="4dp"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+       android:layout_below="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/farm_item"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="5"
+        android:id="@+id/recycler_view"/>
+
+</RelativeLayout>

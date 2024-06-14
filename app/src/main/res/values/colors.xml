@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#31363F</color>
+    <color name="white">#EEEEEE</color>
+
+
+    <color name="btn_primary">#3876BF</color>
+    <color name="btn_success">#25476a</color>
+    <color name="btn_secondary">#B4B4B8</color>
+    <color name="btn_danger">#E76161</color>
+    <color name="btn_warning">#F6B17A</color>
+    <color name="btn_info">#51829B</color>
+
+    <color name="colorEndGrad">#167A1C</color>
+    <color name="colorStartGrad">#54B159</color>
+
+    <color name="colorEndGradBG">#E2BAC8</color>
+    <color name="colorStartGradBG">#D8F8DA</color>
+
+    <color name="box_color">#1D2C2A2A</color>
+    <color name="dark_blue">#2C3E50</color>
+
+    <color name="disabled">#AAAAAA</color>
+
+</resources>

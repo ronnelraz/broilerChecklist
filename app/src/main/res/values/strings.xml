@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Broiler CheckList</string>
+    <string name="audit_date">Audit Date</string>
+    <string name="farm_house_flock">Farm House Flock</string>
+    <string name="NoFlock">Please Select House</string>
+    <string name="broilerreject_reason">Select a reason to categorize the chicken as broiler reject that should be the same with the qty. declared to the above mentioned data.</string>
+
+    <declare-styleable name="SignaturePad">
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
+        <attr name="lineColor" format="color" />
+    </declare-styleable>
+
+</resources>

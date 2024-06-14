@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Checklist">
+
+
+
+<include android:id="@+id/appbar" layout="@layout/appbar"/>
+
+    <ScrollView
+        android:layout_marginBottom="70dp"
+        android:id="@+id/scrollview"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/icons8_canlendar"
+                    android:drawablePadding="3dp"
+                    android:id="@+id/audit_date"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhaina_2_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Audit Date : dd/mm/yyyy" />
+
+
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/icons8_canlendar"
+                    android:drawablePadding="3dp"
+                    android:id="@+id/date_in"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhaina_2_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Audit Date : dd/mm/yyyy" />
+
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/manok"
+                    android:drawablePadding="3dp"
+                    android:layout_below="@+id/audit_date"
+                    android:id="@+id/age"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhaina_2_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Age : 50 days" />
+
+                <TextView
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/manok"
+                    android:drawablePadding="3dp"
+                    android:id="@+id/balance"
+                    android:layout_below="@+id/audit_date"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhaina_2_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Stock Balance  : 10,000 Birds" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:background="@color/btn_primary"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:elevation="4dp">
+
+                <!-- First column -->
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Product" />
+
+                <!-- First partition -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/> <!-- Adjust color as needed -->
+
+                <!-- Second column -->
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Birds" />
+
+                <!-- Second partition -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/> <!-- Adjust color as needed -->
+
+                <!-- Third column -->
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Weight(Kg)" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:elevation="4dp">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- First column -->
+                <TextView
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="start|center"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Broiler" />
+
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- Second column -->
+                <EditText
+                    android:id="@+id/broiler_birds"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#DAE5EA"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center|end"
+                    android:paddingEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textCursorDrawable="@color/black"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+
+                <!-- Third column -->
+                <EditText
+                    android:id="@+id/broiler_wgh"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#DAE5EA"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center|end"
+                    android:paddingEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@color/black"
+                    android:hint="0" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:elevation="4dp">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- First column -->
+                <TextView
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="start|center"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Broiler Reject" />
+
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- Second column -->
+                <EditText
+                    android:id="@+id/broiler_reject_birds"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#DAE5EA"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center|end"
+                    android:paddingEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@color/black"
+                    android:hint="0" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+
+                <!-- Third column -->
+                <EditText
+                    android:id="@+id/broiler_reject_wgh"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#DAE5EA"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center|end"
+                    android:paddingEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@color/black"
+                    android:hint="0" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/broiler_reject_auto_count"
+                android:layout_marginTop="5dp"
+                android:paddingTop="3dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/baloo_bhaina_2_bold"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FF5722"
+                android:text="Broiler reject auto count"/>
+
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:justificationMode="inter_word"
+                android:fontFamily="@font/baloo_bhai_2"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/broilerreject_reason"/>
+
+
+            <LinearLayout
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:elevation="4dp">
+
+                <!-- First column -->
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Reason" />
+
+                <!-- First partition -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/> <!-- Adjust color as needed -->
+
+                <!-- Second column -->
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Birds" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:windowSoftInputMode="adjustResize"
+                android:id="@+id/reason_code_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <include layout="@layout/loading_shimmer"/>
+
+
+
+            <!--            <include layout="@layout/reason_item"/>-->
+<!--            <include layout="@layout/reason_item"/>-->
+<!--            <include layout="@layout/reason_item"/>-->
+
+
+
+            <LinearLayout
+                android:windowSoftInputMode="adjustResize"
+                android:id="@+id/other_reason_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="25dp"
+            android:text="Cancel"
+            android:onClick="Cancel"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/btn_success"
+            app:cornerRadius="20dp"
+            app:rippleColor="@color/box_color"
+            android:fontFamily="@font/baloo"
+            android:textSize="13sp"
+            android:id="@+id/negative"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="25dp"
+            android:text="save"
+            android:onClick="save"
+            app:backgroundTint="@color/colorStartGrad"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/colorEndGrad"
+            app:cornerRadius="20dp"
+            app:rippleColor="@color/box_color"
+            android:id="@+id/positive"
+            android:fontFamily="@font/baloo"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        android:elevation="5dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/signature_user"
+                android:textAllCaps="true"
+                android:textColor="@color/btn_primary"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/baloo_bhaina_2_bold"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Signature"
+                android:lineSpacingExtra="-15dp"/>
+
+
+            <com.ronnelrazo.broilerchecklist.func.SignaturePad
+                android:layout_margin="10dp"
+                android:id="@+id/signaturePad"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/box"
+                android:backgroundTint="#D7D8D7"
+                app:strokeColor="@color/black"
+                app:strokeWidth="3dp"/>
+
+
+
+            <TextView
+                android:id="@+id/label_signature_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prepared by:"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/baloo_bhai"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:capitalize="words"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ .abcdefghijklmnopqrstuvwxyz"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:id="@+id/username"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/box"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="25dp"
+                    tools:text="Cancel"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/btn_success"
+                    app:cornerRadius="20dp"
+                    app:rippleColor="@color/box_color"
+                    android:fontFamily="@font/baloo"
+                    android:textSize="11sp"
+                    android:id="@+id/negative"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginStart="5dp"
+                    android:text="reset"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/btn_danger"
+                    app:cornerRadius="20dp"
+                    app:rippleColor="@color/box_color"
+                    android:fontFamily="@font/baloo"
+                    android:textSize="11sp"
+                    android:id="@+id/reset"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="25dp"
+                    tools:text="OK"
+                    app:backgroundTint="@color/btn_success"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/btn_success"
+                    app:cornerRadius="20dp"
+                    app:rippleColor="@color/box_color"
+                    android:id="@+id/positive"
+                    android:fontFamily="@font/baloo"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

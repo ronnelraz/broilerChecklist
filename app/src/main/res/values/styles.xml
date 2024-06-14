@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CheckBoxStyle">
+        <!-- Customize the checkbox appearance as needed -->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <!-- Add more attributes here -->
+    </style>
+
+
+    <style name="toolbarTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="toolbarSubTitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="SlideUpDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_animation</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="SlideDownDialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_animation</item>
+    </style>
+
+
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Change background color -->
+        <item name="android:background">#FFFFFF</item>
+        <!-- Change text color -->
+        <item name="android:textColor">#000000</item>
+        <!-- Change title text color (optional) -->
+        <item name="colorAccent">@color/btn_primary</item>
+
+        <item name="colorControlActivated">#FF0000</item> <!-- Change to your desired header color -->
+        <item name="android:textColorPrimary">#FF0000</item> <!-- Change to your desired header text color -->
+    </style>
+
+
+    <!-- Style for the DatePicker. -->
+    <style name="MyDatePickerStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:headerBackground">@color/btn_success</item>
+        <item name="android:calendarTextColor">@color/black</item>
+        <item name="android:dayOfWeekBackground">@color/black</item>
+        <item name="android:yearListSelectorColor">@color/btn_primary</item>
+        <item name="android:buttonBarButtonStyle">@style/MyDatePickerDialogButtonStyle</item>
+    </style>
+
+    <style name="MyDatePickerDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="Base.Theme.Fullscreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>
