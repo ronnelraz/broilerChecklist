@@ -80,7 +80,7 @@ public class Menu extends AppCompatActivity implements NetworkUtil.NetworkStatus
         String updateUrl = "https://agro.cpf-phil.com/cpos/api/latest_version"; // Replace with your update URL
         appUpdater = new AppUpdater(this, updateUrl);
 
-        // Check for updates when activity starts
+//        // Check for updates when activity starts
         appUpdater.checkForUpdate();
 
 

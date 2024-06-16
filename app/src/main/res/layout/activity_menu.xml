@@ -31,8 +31,7 @@
              android:layout_width="39dp"
              android:layout_height="39dp"
              android:src="@drawable/icon_small"
-             android:scaleX="-1"
-             />
+             android:scaleX="-1" />
 
 
          <TextView
@@ -58,6 +57,7 @@
              android:textSize="15sp"
              android:layout_marginStart="8dp"
              android:textColor="@color/white"/>
+
 
 
          <ImageView

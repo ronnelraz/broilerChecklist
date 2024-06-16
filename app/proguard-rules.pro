@@ -31,4 +31,4 @@
 -keep class * implements com.google.gson.JsonSerializer
 
 # Your API models
--keep class com.yourpackage.models.** { *; }
+-keep class com.ronnelrazo.broilerchecklist.** { *; }

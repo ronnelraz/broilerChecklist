@@ -10,6 +10,8 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +38,10 @@ public class AppUpdater {
     private long downloadId;
     private BroadcastReceiver downloadReceiver;
 
+
+
     private static final String APK_FILE_NAME = "newupdate.apk";
+    private static final int DOWNLOAD_DELAY_MS = 5000;
 
     public AppUpdater(Context context, String updateUrl) {
         this.context = context;
@@ -49,16 +54,23 @@ public class AppUpdater {
     }
 
     private void deleteExistingApk() {
-        File apkFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), APK_FILE_NAME);
+        File downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        File apkFile = new File(downloadsDir, APK_FILE_NAME);
+
         if (apkFile.exists()) {
             boolean deleted = apkFile.delete();
             if (!deleted) {
-                Log.e("AppUpdater", "Failed to delete existing APK file");
+                Log.e("UpdateTask", "Failed to delete existing APK file");
+                // Handle the case where deletion fails (optional)
             }
+        }
+        else{
+            Log.e("UpdateTask", "deleted existing APK file");
         }
     }
 
     private class UpdateTask extends AsyncTask<Void, Integer, Boolean> {
+
 
         private AlertDialog progressDialog;
         private int latestVersionCode;
@@ -66,14 +78,18 @@ public class AppUpdater {
         private String releaseNotes;
         private String apkUrl;
 
+        private Handler handler;
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            handler = new Handler(Looper.getMainLooper()); // Initialize the handler
             showProgressDialog();
         }
 
         @Override
         protected Boolean doInBackground(Void... voids) {
+
             try {
                 URL url = new URL(updateUrl);
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -111,22 +127,24 @@ public class AppUpdater {
         @Override
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
-            // Update progress dialog with download progress
+
+            final int progress = values[0];
+
             if (progressDialog != null) {
                 ProgressBar progressBar = progressDialog.findViewById(R.id.progress_bar);
                 TextView textProgress = progressDialog.findViewById(R.id.text_progress);
 
                 if (progressBar != null && textProgress != null) {
-                    progressBar.setProgress(values[0]);
-                    textProgress.setText(values[0] + "%");
+                    progressBar.setProgress(progress);
+                    textProgress.setText(progress + "%");
                 }
-            }
+            } // Delay for 1 second (1000 milliseconds)
         }
 
         @Override
         protected void onPostExecute(Boolean updateAvailable) {
             super.onPostExecute(updateAvailable);
-            dismissProgressDialog();
+//            dismissProgressDialog();
             // Dismiss progress dialog or update UI indication
             if (updateAvailable) {
                 showUpdateDialog();
@@ -161,15 +179,17 @@ public class AppUpdater {
             dialogBuilder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    deleteExistingApk();
                     startDownload(apkUrl);
                 }
             });
-            dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
+//            dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    dialog.dismiss();
+//                }
+//            });
+
             dialogBuilder.setCancelable(false);
             dialogBuilder.show();
         }

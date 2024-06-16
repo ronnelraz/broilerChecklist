@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<API_Response> call, Throwable t) {
-                    Log.e("API Call", "Failed: " + t.getMessage(), t);
+                    Log.e("UKITNANA", "Failed: " + t.getMessage(), t);
                     func.toast(R.drawable.close,t.getMessage(), Gravity.BOTTOM|Gravity.CENTER,0,50);
                     func.alert_dialog.dismiss();
 

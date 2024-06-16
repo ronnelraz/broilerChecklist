@@ -10,8 +10,8 @@ android {
         applicationId "com.ronnelrazo.broilerchecklist"
         minSdk 29
         targetSdk 34
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 7
+        versionName "1.0.7"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -22,7 +22,6 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug
-            debuggable true
         }
         debug {
             debuggable true
